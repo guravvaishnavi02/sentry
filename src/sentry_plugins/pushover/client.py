@@ -4,7 +4,6 @@ from sentry_plugins.client import ApiClient
 class PushoverClient(ApiClient):
     base_url = "https://api.pushover.net/1"
     allow_redirects = False
-    plugin_name = "pushover"
 
     def __init__(self, userkey=None, apikey=None):
         self.userkey = userkey

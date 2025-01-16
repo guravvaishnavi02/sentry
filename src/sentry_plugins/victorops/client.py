@@ -4,7 +4,6 @@ from sentry_plugins.client import ApiClient
 class VictorOpsClient(ApiClient):
     monitoring_tool = "sentry"
     routing_key = "everyone"
-    plugin_name = "victorops"
     allow_redirects = False
 
     def __init__(self, api_key, routing_key=None):

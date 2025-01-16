@@ -2,7 +2,6 @@ from sentry_plugins.client import ApiClient
 
 
 class WebhookApiClient(ApiClient):
-    plugin_name = "webhook"
     allow_redirects = False
     metrics_prefix = "integrations.webhook"
 

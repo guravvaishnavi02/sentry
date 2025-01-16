@@ -18,8 +18,6 @@ class ApiClient(BaseApiClient):
 
     log_path = "sentry.plugins.client"
 
-    plugin_name = "undefined"
-
 
 class AuthApiClient(ApiClient):
     def __init__(self, auth=None, *args, **kwargs):
@@ -111,5 +109,3 @@ class InternalApiClient(BaseInternalApiClient):
     metrics_prefix = "sentry-plugins"
 
     log_path = "sentry.plugins.client"
-
-    plugin_name = "undefined"

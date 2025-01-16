@@ -5,7 +5,6 @@ from sentry_plugins.client import ApiClient
 
 
 class SlackApiClient(ApiClient):
-    plugin_name = "slack"
     allow_redirects = False
 
     def __init__(self, webhook: str, username: str, icon_url: str, channel: str) -> None:

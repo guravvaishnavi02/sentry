@@ -6,7 +6,6 @@ from sentry_plugins.client import ApiClient
 
 class GitLabClient(ApiClient):
     allow_redirects = False
-    plugin_name = "gitlab"
 
     def __init__(self, url, token):
         super().__init__()

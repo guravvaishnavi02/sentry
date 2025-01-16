@@ -7,7 +7,7 @@ from sentry.api.serializers import Serializer
 from sentry.models.options.project_option import ProjectOption
 from sentry.models.project import Project
 
-# Dict with the plugin_name as the key, and enabling_feature_name as the value
+# Dict with the slug as the key, and enabling_feature_name as the value
 SHADOW_DEPRECATED_PLUGINS: dict[str, str] = {
     # "exampleslug": "organizations:integrations-ignore-exampleslug-deprecation"
 }

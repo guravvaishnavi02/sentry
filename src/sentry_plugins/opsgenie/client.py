@@ -3,7 +3,6 @@ from sentry_plugins.client import ApiClient
 
 class OpsGenieApiClient(ApiClient):
     monitoring_tool = "sentry"
-    plugin_name = "opsgenie"
     allow_redirects = False
 
     def __init__(self, api_key, alert_url, recipients=None):

@@ -14,7 +14,6 @@ CARD_FIELDS = ",".join(["name", "shortLink", "idShort"])
 
 class TrelloApiClient(ApiClient):
     base_url = "https://api.trello.com/1"
-    plugin_name = "trello"
 
     def __init__(self, api_key, token=None, **kwargs):
         self.api_key = api_key

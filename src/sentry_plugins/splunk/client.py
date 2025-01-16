@@ -2,7 +2,6 @@ from sentry_plugins.client import ApiClient
 
 
 class SplunkApiClient(ApiClient):
-    plugin_name = "splunk"
     allow_redirects = False
     metrics_prefix = "integrations.splunk"
 

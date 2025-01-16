@@ -7,7 +7,6 @@ INTEGRATION_API_URL = "https://events.pagerduty.com/generic/2010-04-15/create_ev
 
 class PagerDutyPluginClient(ApiClient):
     client = "sentry"
-    plugin_name = "pagerduty"
     allow_redirects = False
 
     def __init__(self, service_key=None):
