@@ -51,7 +51,7 @@ class SearchResolverQueryTest(TestCase):
         query, _ = self.resolver.resolve_query("ai.total_tokens.used:123")
         assert query == TraceItemFilter(
             comparison_filter=ComparisonFilter(
-                key=AttributeKey(name="ai_total_tokens_used", type=AttributeKey.Type.TYPE_DOUBLE),
+                key=AttributeKey(name="ai_total_tokens_used", type=AttributeKey.Type.TYPE_FLOAT),
                 op=ComparisonFilter.OP_EQUALS,
                 value=AttributeValue(val_double=123),
             )
@@ -95,7 +95,7 @@ class SearchResolverQueryTest(TestCase):
         query, _ = self.resolver.resolve_query("ai.total_tokens.used:[123,456,789]")
         assert query == TraceItemFilter(
             comparison_filter=ComparisonFilter(
-                key=AttributeKey(name="ai_total_tokens_used", type=AttributeKey.Type.TYPE_DOUBLE),
+                key=AttributeKey(name="ai_total_tokens_used", type=AttributeKey.Type.TYPE_FLOAT),
                 op=ComparisonFilter.OP_IN,
                 value=AttributeValue(val_double_array=DoubleArray(values=[123, 456, 789])),
             )
@@ -105,7 +105,7 @@ class SearchResolverQueryTest(TestCase):
         query, _ = self.resolver.resolve_query("ai.total_tokens.used:>123")
         assert query == TraceItemFilter(
             comparison_filter=ComparisonFilter(
-                key=AttributeKey(name="ai_total_tokens_used", type=AttributeKey.Type.TYPE_DOUBLE),
+                key=AttributeKey(name="ai_total_tokens_used", type=AttributeKey.Type.TYPE_FLOAT),
                 op=ComparisonFilter.OP_GREATER_THAN,
                 value=AttributeValue(val_double=123),
             )
